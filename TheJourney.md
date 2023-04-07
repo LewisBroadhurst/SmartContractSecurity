@@ -12,6 +12,9 @@ Still way behind in understanding solidity but found a potential gas optimisatio
 Need to understand the tooling better (foundry / slither).
 Also want to go through the secureum youtube channel and do some Capture The Ether challenges.
 
+- [x] Installed foundry
+- [x] Installed slither
+
 ## 08/04/23
 
 ## 09/04/23
