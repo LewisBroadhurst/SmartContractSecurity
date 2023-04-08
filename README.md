@@ -1,7 +1,7 @@
 # SmartContractSecurity
 
 ## The Path...
-- [ ] Get the tooling required
+- [x] Get the tooling required
 - [ ] Complete all the Capture The Ether challenges
 - [ ] Write up audit reports for the advanced CTE challenges
 
@@ -11,3 +11,7 @@
 - [ ] Ethernaut (https://ethernaut.zeppelin.com/)
 - [ ] cmichel.io
 - [ ] teachyourselfcrypto.com
+
+## Solidity
+- [ ] Understand modifiers more
+- [ ] 
