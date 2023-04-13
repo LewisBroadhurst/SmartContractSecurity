@@ -16,6 +16,12 @@ Also want to go through the secureum youtube channel and do some Capture The Eth
 - [x] Installed slither
 
 ## 08/04/23
+Submitted some gas reports and QA for caviar competition.
+Probably didn't catch anything but just a punt from some work with chat GPT.
 
 ## 09/04/23
 Away until 12/04/23.
+
+## 13/04/23
+Looking at modifiers and how they can be used to improve security.
+Going through the basics with CaptureTheEther and looking at the frankencoin competition.
