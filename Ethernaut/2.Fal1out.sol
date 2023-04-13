@@ -46,3 +46,8 @@ contract Fallout {
 
 // web3.eth.getBalance("0xc1781F372ecD3440c19a9D800A0988d1104b377e") => "0"
 
+// contract.Fal1out({value: toWei("0.1")}) => tx: "0x85264283f8596ba4cd951856f3c923825c64095aa9d37619279c5f8d9b72fd73"
+
+// await contract.owner() => '0x319d567611c5a1017BA081e2B27B7c7b57e1797d'
+
+// await web3.eth.getBalance("0xc1781F372ecD3440c19a9D800A0988d1104b377e") => '100000000000000000'
