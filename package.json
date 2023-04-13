@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@openzeppelin/contracts": "^4.8.2",
+    "ethers": "^6.3.0",
     "solmate": "^6.7.0"
   }
 }

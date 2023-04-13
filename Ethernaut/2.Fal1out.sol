@@ -51,3 +51,5 @@ contract Fallout {
 // await contract.owner() => '0x319d567611c5a1017BA081e2B27B7c7b57e1797d'
 
 // await web3.eth.getBalance("0xc1781F372ecD3440c19a9D800A0988d1104b377e") => '100000000000000000'
+
+// await contract.collectAllocations()
