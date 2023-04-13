@@ -12,7 +12,7 @@ contract Fallout {
 
   /* constructor */
   function Fal1out() public payable {
-    owner = msg.sender;
+    owner = payable(msg.sender);
     allocations[owner] = msg.value;
   }
 
@@ -34,7 +34,7 @@ contract Fallout {
   }
 
   function collectAllocations() public onlyOwner {
-    msg.sender.transfer(address(this).balance);
+    payable(msg.sender).transfer(address(this).balance);
   }
 
   function allocatorBalance(address allocator) public view returns (uint) {
