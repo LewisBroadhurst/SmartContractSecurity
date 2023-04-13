@@ -1,0 +1,14 @@
+{
+  "name": "smartcontractsecurity",
+  "version": "1.0.0",
+  "description": "- [x] Get the tooling required\r - [ ] Complete all the Capture The Ether challenges\r - [ ] Write up audit reports for the advanced CTE challenges",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "solmate": "^6.7.0"
+  }
+}
