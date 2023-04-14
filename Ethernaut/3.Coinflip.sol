@@ -39,4 +39,4 @@ contract CoinFlip {
 }
 
 // contract.address => '0xC2789fe7Bb1fE0467d1Be603c0206dB99BB2e811'
-// 
+// See Attack.Coinflip.sol for attack code

