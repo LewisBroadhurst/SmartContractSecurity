@@ -24,4 +24,12 @@ Away until 12/04/23.
 
 ## 13/04/23
 Looking at modifiers and how they can be used to improve security.
-Going through the basics with CaptureTheEther and looking at the frankencoin competition.
+Going through the basics with Ethernaut and looking at the frankencoin competition.
+
+## 14/04/23
+Completed up to L7 in Ethernaut.
+
+## 15/04/23
+Realised how much harder this is going to be that I initially thought.
+Need to take it slower, there's a lot to learn and so much I don't know.
+People saying they found mid/high level bugs in the first month etc probably outliers or chatting waffle.
