@@ -19,6 +19,19 @@ function contribute() public payable {
 contract.contribute({value: toWei("0.0005")})
 ```
 
+### Non-Payable functions
+Now we will try to attach a value to the call of a non-payable function. The EVM will throw an error and revert our transaction.
+
+```
+function collectAllocations() public onlyOwner {
+    msg.sender.transfer(address(this).balance);
+}
+
+// call function
+contract.collectAllocations({value: toWei("0.001")})
+returns => Error in RPC response: execution reverted
+```
+
 ### Targeting the receive function of a contract
 
 In 1.Fallback of the Ethernaut CTFs, we can take control of the contract by sending eth directly to the contract address, which triggers the `receive` function.
