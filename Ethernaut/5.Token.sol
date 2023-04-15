@@ -31,3 +31,15 @@ contract Token {
 // await contract.transfer("0x70a09399794331A64772E15C170b591BB6b9cf16", toWei("21")) => tx:0x25c71cae798476bbeb8449585513c2a84ce9b58b6a4a360096b3e9512db01095
 
 // Hacked contract!
+
+/*
+Overflows are very common in solidity and must be checked for with control statements such as:
+
+if(a + c > a) {
+  a = a + c;
+}
+An easier alternative is to use OpenZeppelin's SafeMath library that automatically checks for overflows in all the mathematical operators. The resulting code looks like this:
+
+a = a.add(c);
+If there is an overflow, the code will revert.
+*/

@@ -1,15 +1,18 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract Force {/*
-
+contract Force {
+  
+  constructor () {
+/*
                    MEOW ?
          /\_/\   /
     ____/ o o \
   /~____  =ø= /
  (______)__m_m)
 
-*
+*/
+}
 }
 
 // contract.address => '0x4D090f53a88C4AFC20ee44FC88222F312e8E5e9f'
@@ -24,6 +27,10 @@ contract Force {/*
 // selfdestruct contract and force payment to instance
 // getBalance(contract.address) => [[PromiseResult]]: "0.001"
 
+/*
+In solidity, for a contract to be able to receive ether, the fallback function must be marked payable.
 
+However, there is no way to stop an attacker from sending ether to a contract by self destroying. Hence, it is important not to count on the invariant address(this).balance == 0 for any contract logic.
+*/
 
 // https://0xsage.medium.com/ethernaut-lvl-7-walkthrough-how-to-selfdestruct-and-create-an-ether-blackhole-eb5bb72d2c57
