@@ -14,4 +14,4 @@
 
 ## Solidity
 - [ ] Understand modifiers more
-- [ ] 
+- [ ] Storage Slots
