@@ -13,5 +13,6 @@
 - [ ] teachyourselfcrypto.com
 
 ## Solidity
-- [ ] Understand modifiers more
+- [x] Understand modifiers more
 - [ ] Storage Slots
+- [ ] Working on tests

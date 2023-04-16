@@ -33,3 +33,8 @@ Completed up to L7 in Ethernaut.
 Realised how much harder this is going to be that I initially thought.
 Need to take it slower, there's a lot to learn and so much I don't know.
 People saying they found mid/high level bugs in the first month etc probably outliers or chatting waffle.
+
+## 16/04/23
+CTFs are basically impossible for me at the moment. Really no chance in understanding them apart from seeing the writeups.
+Created a decent guide as to how I should approach my smart contract audits.
+Need to get better with the tooling and writing tests.
