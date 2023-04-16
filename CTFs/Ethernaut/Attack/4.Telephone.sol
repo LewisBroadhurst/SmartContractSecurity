@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 import "../../node_modules/@openzeppelin/contracts/utils/math/SafeMath.sol";
-import { ethers } from '../../node_modules/ethers';
+import { ethers } from '../../../node_modules/ethers';
 
 contract AttackTelephone {
 

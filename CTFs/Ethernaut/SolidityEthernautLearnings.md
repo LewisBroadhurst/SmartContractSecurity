@@ -92,3 +92,21 @@ web3.eth.getStorageAt("0xAFe83D26Dd816488c89bf8cf925D8156f272676A", 1, (err,res)
 // utility functions e.g. to convert hex to ascii
 web3.utils.hexToAscii("0x412076657279207374726f6e67207365637265742070617373776f7264203a29")
 ```
+
+## Unsafe mathematical operations
+### Overflow/Underflow
+
+As is the nature of unsigned ints, if we try to add a number to a uint that is larger than the max value of a uint, it will overflow and wrap around to 0.
+
+```
+// Overflow
+uint256 240 + 20 = 14
+
+// Underflow
+uint256 10 - 11 = 255
+```
+
+### Dividing by zero
+
+Any instance of a division by 0 is highly dangerous and should be avoided at all costs.
+
