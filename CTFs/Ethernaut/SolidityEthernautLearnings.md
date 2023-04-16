@@ -116,6 +116,33 @@ function changeOwner(address _owner) public {
 
 msg.sender is the last caller while tx.origin is the original caller of the recursive function chain.
 
+### Sensible access modifiers
+How can we change the access modifiers of the functions?
+If someone with no access rights can call a function, what can they do?
+Need to check public/external functions and see what damage they could do if called by anyone.
+
+### Using a poor random number generation technique
+How can we generate a random number safely, are they using Chainlink VRF?
+Avoid using a FACTOR and blocknumber to generate a random number.
+
+### Owner of contract changing
+Easy inroad for an attacker to take control of the contract and if necessary, a massively crucial part of the contract to be safe.
+
+### Storing sensitive values on chain
+State variables marked as private are actually accessible publicly through a few clever lines of code.
+
+To ensure that data is private, it needs to be encrypted before being put onto the blockchain. In this scenario, the decryption key should never be sent on-chain, as it will then be visible to anyone who looks for it. zk-SNARKs provide a way to determine whether someone possesses a secret parameter, without ever having to reveal the parameter.
+
+e.g. The Vault CTF from ethernaut
+```
+// We can use web3.getStorageAt to get the value of the password, if we know the storage slot
+web3.eth.getStorageAt("0xAFe83D26Dd816488c89bf8cf925D8156f272676A", 1, (err,res)=>{console.log(res)}); 
+=> 0x412076657279207374726f6e67207365637265742070617373776f7264203a29
+
+web3.utils.hexToAscii("0x412076657279207374726f6e67207365637265742070617373776f7264203a29") 
+=> 'A very strong secret password :)'
+```
+
 ## Remix
 
 ### Setting msg.value in the Remix console
@@ -172,3 +199,17 @@ uint256 10 - 11 = 255
 
 Any instance of a division by 0 is highly dangerous and should be avoided at all costs.
 
+## Methods of sending ETH to an EOA/contract
+
+### Selfdestruct
+Can use selfdestruct to force a contract to accept ETH regardless of whether it has a receive/fallback function.
+
+Therefore, it is important not to count on the invariant address(this).balance == 0 for any contract logic.
+
+```
+contract Force {
+    // No functionality but will receive ETH if the selfdestruct function is called from a malicious contract
+}
+```
+### x
+### y
