@@ -1,5 +1,3 @@
-## Remix IDE
-
 ## Interacting with contracts
 
 ### Payable functions
@@ -53,6 +51,70 @@ More info:
 https://solidity-by-example.org/sending-ether/
 https://docs.soliditylang.org/en/v0.8.19/contracts.html#special-functions
 https://blog.soliditylang.org/2020/03/26/fallback-receive-split/
+
+## Security red flags
+
+### delegatecalls
+`delegatecall` is a low level function similar to `call`.
+
+When contract A executes delegatecall to contract B, B's code is executed with contract A's storage, msg.sender and msg.value.
+
+Therefore, we can replace the storage value of contract B with whatever we want, meaning we can take control of the contract.
+
+```
+contract B {
+    // NOTE: storage layout must be the same as contract A
+    uint public num;
+    address public sender;
+    uint public value;
+
+    function setVars(uint _num) public payable {
+        num = _num;
+        sender = msg.sender;
+        value = msg.value;
+    }
+}
+
+contract A {
+    uint public num;
+    address public sender;
+    uint public value;
+
+    function setVars(address _contract, uint _num) public payable {
+        // A's storage is set, B is not modified.
+        (bool success, bytes memory data) = _contract.delegatecall(
+            abi.encodeWithSignature("setVars(uint256)", _num)
+        );
+    }
+}
+```
+
+Usage of delegatecall is particularly risky and has been used as an attack vector on multiple historic hacks. With it, your contract is practically saying "here, -other contract- or -other library-, do whatever you want with my state". Delegates have complete access to your contract's state. The delegatecall function is a powerful feature, but a dangerous one, and must be used with extreme care.
+
+More info:
+https://solidity-by-example.org/delegatecall/
+https://medium.com/coinmonks/ethernaut-lvl-6-walkthrough-how-to-abuse-the-delicate-delegatecall-466b26c429e4
+
+### tx.origin vs msg.sender
+
+Using tx.origin is dangerous as it can be a vulnerability in a smart contract that allows an attacker to bypass security checks.
+
+A simple example is found in the ethernaut Telephone CTF.
+
+We can create an attacker contract we can use as a proxy to attack the Telephone contract and call the change owner function.
+- tx.origin will be the address of the EOA that initiates the attack
+- msg.sender will be the address of the attacker contract
+- The check of tx.origin != msg.sender will then pass
+
+```
+function changeOwner(address _owner) public {
+    if (tx.origin != msg.sender) {
+        owner = _owner;
+    }
+}
+```
+
+msg.sender is the last caller while tx.origin is the original caller of the recursive function chain.
 
 ## Remix
 

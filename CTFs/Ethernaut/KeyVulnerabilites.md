@@ -21,5 +21,6 @@
    - Are there any possible exploits with the math?
 
 6. Delegation: how a Smart Contract can change the state of other smart contracts
+   - delegatecall() can be used to change the state of other contracts -- similar to the call method
    - https://zuhaibmd.medium.com/ethernaut-level-6-delegation-ed5f56c39590
    - https://0xsage.medium.com/ethernaut-lvl-6-walkthrough-how-to-abuse-the-delicate-delegatecall-466b26c429e4
