@@ -52,7 +52,7 @@ https://solidity-by-example.org/sending-ether/
 https://docs.soliditylang.org/en/v0.8.19/contracts.html#special-functions
 https://blog.soliditylang.org/2020/03/26/fallback-receive-split/
 
-## Security red flags
+## Security Red Flags
 
 ### delegatecalls
 `delegatecall` is a low level function similar to `call`.
@@ -211,5 +211,23 @@ contract Force {
     // No functionality but will receive ETH if the selfdestruct function is called from a malicious contract
 }
 ```
-### x
-### y
+
+## Locking a contract
+
+### Using an intermediate SC to lock a contract
+
+
+As seen in Ethernaut L9...
+```
+receive() external payable {
+    require(msg.value >= prize || msg.sender == owner);
+    payable(king).transfer(msg.value);
+    king = msg.sender;
+    prize = msg.value;
+}
+```
+
+Here we can set ourselves to be the king, and then we can then use a smart contract with no fallback or receive function to make the receive function throw an error. 
+This means noone else can be set to be the king and the game is locked.
+
+To avoid this, we should use appropiate error handling.
