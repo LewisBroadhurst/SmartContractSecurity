@@ -15,4 +15,8 @@
 ## Solidity
 - [x] Understand modifiers more
 - [ ] Storage Slots
-- [ ] Working on tests
+- [ ] Working on tests / tooling
+  - [ ] Foundry [Anvil, Chisel, etc]
+  - [ ] Slither
+- [ ] Abstract contracts & interfaces
+- [ ] Calldata vs. Memory
