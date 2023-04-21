@@ -20,3 +20,6 @@
   - [ ] Slither
 - [ ] Abstract contracts & interfaces
 - [ ] Calldata vs. Memory
+
+## Current Struggles
+- Really can't get into a codebase and understand what is happening still. Need to work on my understanding of protocols.
