@@ -15,6 +15,7 @@
 ## Solidity
 - [x] Understand modifiers more
 - [ ] Storage Slots
+  - [ ] https://www.goodbytes.be/blog/article/ethernaut-walkthrough-level-12-privacy
 - [ ] Working on tests / tooling
   - [ ] Foundry [Anvil, Chisel, etc]
   - [ ] Slither

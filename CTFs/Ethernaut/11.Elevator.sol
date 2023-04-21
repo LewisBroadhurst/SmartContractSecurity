@@ -19,3 +19,9 @@ contract Elevator {
     }
   }
 }
+
+// How does the Hack work??
+
+// The exploit comes from calling the goTo function from our hacking contract
+// This sets the building variable to the address of the hacking contract
+// Here we can implement our own custom .isLastFloor function that will set the top boolean to true, overriding the interface isLastFloor function
