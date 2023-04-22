@@ -1,7 +1,7 @@
 # SmartContractSecurity
 
 ### 22/04/23
-- Work on 3 smaller codebases that have complete reports and try to understand the H/M risks.
+- Work on 3 smaller codebases that have complete reports and try to understand the H/M risks. Important to work with foundry, run tests, create POCs etc. Findings from the reports should be categorised into relevant, NFT / Flash Loan / categories in PseudoAudits.
   - [ ] Golem
   - [ ] Y
   - [ ] Z
