@@ -24,3 +24,6 @@
    - delegatecall() can be used to change the state of other contracts -- similar to the call method
    - https://zuhaibmd.medium.com/ethernaut-level-6-delegation-ed5f56c39590
    - https://0xsage.medium.com/ethernaut-lvl-6-walkthrough-how-to-abuse-the-delicate-delegatecall-466b26c429e4
+
+7. Storage of sensitive information should never be stored on the blockchain, a private access modifier will not hide this data. The only way to do this safely would be to hide it in a ZK Snark (or something like that). 
+8. Be careful of the methods that you are importing from other contracts. If you inherit a contract you are also inheriting all of the methods from that contract, not just the ones you explicitally call.

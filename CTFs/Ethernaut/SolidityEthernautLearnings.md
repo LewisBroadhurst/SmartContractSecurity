@@ -231,3 +231,9 @@ Here we can set ourselves to be the king, and then we can then use a smart contr
 This means noone else can be set to be the king and the game is locked.
 
 To avoid this, we should use appropiate error handling.
+
+## Storage
+
+### How to read Ethereum contract storage
+
+Great article: https://medium.com/@dariusdev/how-to-read-ethereum-contract-storage-44252c8af925
