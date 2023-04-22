@@ -1,5 +1,15 @@
 # SmartContractSecurity
 
+### 22/04/23
+- Work on 3 smaller codebases that have complete reports and try to understand the H/M risks.
+  - [ ] Golem
+  - [ ] Y
+  - [ ] Z
+- Take on any Sherlock/Codearena competitions on small codebases (up to 7 day comps).
+  - [ ] x
+  - [ ] y
+  - [ ] z
+
 ## The Path...
 - [x] Get the tooling required
 - [x] Complete all the Ethernaut challenges
