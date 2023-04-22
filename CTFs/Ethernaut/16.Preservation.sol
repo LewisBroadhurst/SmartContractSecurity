@@ -38,3 +38,5 @@ contract LibraryContract {
     storedTime = _time;
   }
 }
+
+// This example demonstrates why the library keyword should be used for building libraries, as it prevents the libraries from storing and accessing state variables.

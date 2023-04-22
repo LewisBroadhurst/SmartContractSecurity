@@ -22,8 +22,12 @@
 
 6. Delegation: how a Smart Contract can change the state of other smart contracts
    - delegatecall() can be used to change the state of other contracts -- similar to the call method
+   - Really is a terrible idea to use delegatecall() in your contracts, there must be example uses of this for proxies maybe?
    - https://zuhaibmd.medium.com/ethernaut-level-6-delegation-ed5f56c39590
    - https://0xsage.medium.com/ethernaut-lvl-6-walkthrough-how-to-abuse-the-delicate-delegatecall-466b26c429e4
 
 7. Storage of sensitive information should never be stored on the blockchain, a private access modifier will not hide this data. The only way to do this safely would be to hide it in a ZK Snark (or something like that). 
 8. Be careful of the methods that you are importing from other contracts. If you inherit a contract you are also inheriting all of the methods from that contract, not just the ones you explicitally call.
+9. Be careful of precision as there are no floating points in solidity.
+   - When doing calculations related to any sensitive asset such as tokens, careful attention should be paid to precision since there are no floating points in solidity, precision is lost as numbers are rounded off leading to exploits such as the one shown above
+

@@ -1,0 +1,40 @@
+Let’s dive into the contract with Hardhat
+In Level 8 — Vault, we used Remix to get and read the storage layout of the contract. This time, for the sake of learning new tools, we will use Hardhat!
+
+ℹ️ If you’ve never used Hardhat before, here is a quick guide to set it up:
+How to Setup Your Hardhat Environment in Under 5 Minutes
+
+In ./contracts, create a new file Privacy.sol and paste in the code of the given contract. This contract is using the compiler version 0.6.0, so don’t forget to add this version to the Hardhat config. Here is what your config should look like:
+
+
+From there, you should be able to run npx hardhat compile in your terminal, to compile our Privacy contract.
+
+Access the storage layout
+We’re gonna be using a library called hardhat-storage-layout, which provides a more friendly way to read the storage layout than scrolling the build-info file generated during the compilation:
+
+$ npm i -D hardhat-storage-layout
+In order to be able to use it, you need to modify your Hardhat config as follows:
+
+
+Next, create a very short script to export the layout storage. In the ./scripts folder, create get_storage_layout.ts:
+
+
+Great! We have everything we need. Now, in your terminal, run the following:
+
+$ npx hardhat run scripts/get_storage_layout.ts
+This command should output the storage layout of our Privacy contract:
+
+
+How does Solidity layout state variables in our Privacy Contract?
+As we’ve seen in the 8th level, state variables are stored in slots. But it is not as simple as stateVariable1 going to slot 0 and stateVariableN going to slot n-1.
+
+In fact, it depends on the type of the state variable. For instance, Looking at the storage above, notice that flattening, denomination, and awkwardness live at the slot n°3.
+
+State variables of contracts are stored in storage in a compact way such that multiple values sometimes use the same storage slot. A storage slot can store exactly 32 bytes (or 256 bits) and if a value type does not fit the remaining part of a storage slot, it is stored in the next storage slot.
+
+Here is an illustration of what the Privacy contract storage layout actually looks like:
+
+
+Privacy’s storage layout
+Solution
+Great, we know that we need to read data[2], that lives in the slot n°5.

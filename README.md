@@ -2,14 +2,16 @@
 
 ## The Path...
 - [x] Get the tooling required
-- [ ] Complete all the Capture The Ether challenges
-- [ ] Write up audit reports for the advanced CTE challenges
+- [x] Complete all the Ethernaut challenges
+- [ ] Damn Vulnerable DeFi seems much more promising
+
+Honestly pretty dissapointed with with Ethernaut CTF challenges. The solutions are abstract and in the few codebases I've seen are kind of irrelevant. Coders know not to use msg.sender == tx.origin etc.
 
 ## Resources
 - [ ] https://www.youtube.com/watch?v=0aJfCug1zTM&t=1246s&ab_channel=Chainlink
 - [ ] Secureum
-- [ ] Ethernaut (https://ethernaut.zeppelin.com/)
-- [ ] cmichel.io
+- [x] Ethernaut (https://ethernaut.zeppelin.com/)
+- [x] cmichel.io
 - [ ] teachyourselfcrypto.com
 
 ## Solidity
@@ -21,6 +23,7 @@
   - [ ] Slither
 - [ ] Abstract contracts & interfaces
 - [ ] Calldata vs. Memory
+- [ ] Assembly / OPCODES
 
 ## Current Struggles
 - Really can't get into a codebase and understand what is happening still. Need to work on my understanding of protocols.

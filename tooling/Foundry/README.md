@@ -1,9 +1,9 @@
-# DOCS -- https://book.getfoundry.sh/
+# Docs -- https://book.getfoundry.sh/
 
 ## Youtube Videos
 
 ### Smart Contract Development with Foundry
-- [ ] https://www.youtube.com/watch?v=uelA2U9TbgM
+- [x] https://www.youtube.com/watch?v=uelA2U9TbgM
 
 ### Intro to Foundry | The FASTEST Smart Contract Framework
 - [x] https://www.youtube.com/watch?v=fNMfMxGxeag&ab_channel=PatrickCollins
