@@ -4,7 +4,20 @@
 
 Blueberry is a decentralized, permissionless lending market at its core, which whitelists loan deployments that can sometimes be performed with greater than 100% LTV.
 
-Loans are non-custodial, meaning that neither the protocol nor the borrower are able to take control of the funds. Rather, the 3 components: Collateral, Loan, and Deployment, are wrapped into a “Position NFT” held by the bank that can be redeemed for its PnL should the borrower decide to close their position.
+Loans are non-custodial, meaning that neither the protocol nor the borrower are able to take control of the funds. 
+Rather, the 3 components: Collateral, Loan, and Deployment, are wrapped into a “Position NFT” held by the bank that can be 
+redeemed for its PnL should the borrower decide to close their position.
+
+The Blueberry DAO acts as a decentralized risk department of a bank, determining appropriate risk parameters such as LTV 
+and Min/Max Positions based on the deployment of the loan. DAO contributors including contract development shops and top 
+security firms work through governance to ensure loans are safe and liquidations can be performed profitably when necessary. 
+By isolating risks based on the deployment, the protocol increases safety for both lenders and borrowers. 
+It also allows the protocol to support mid-cap assets.
+
+The DAO will begin by offering integrations with popular loan deployments which are accessible on chain today, including the following categories:
+1. Liquidity Provision / Yield Arbitrage: Automated LP yield strategies that earn trading fees, LSDs, and more
+2. Leverage Trading: Access leverage into directional trades while maintaining full custody and earning yield rather than paying it
+3. Real World Assets: KYC’d, Qualified Investors can access leverage into the low cost of capital on chain in order to deploy to RWAs such as treasury bills
 
 ## Overview
 
