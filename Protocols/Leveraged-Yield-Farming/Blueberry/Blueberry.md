@@ -30,6 +30,13 @@ Inside the protocol, there are three different types of participants that each p
     - Blueberry anables leverage positions by borrowing specific assests needed on behalf of the users that enter that specific strategy.
 - `Liqudiators` can perform liquidations on active positions that are at a negative pnl. This will earn them a liquidation incentive and makes the position whole for the lender.
 
-// Watch this video to learn more about Blueberry: https://www.youtube.com/watch?v=HBDbeUPKijg
+## What is unique about blueberry?
 
+1. Flexible/isolated collateral: Allows a user to take a liquidity position using borrowed funds while maintaining directional exposure in their preferred asset as collateral
+2. Lever up on chain
+3. Blueberry Vaults: Uniswap v3 concentrated liquidity pools that optimise user yield.
+4. Boosted yield via $bBLB rewards: Governance token rewards are distributed to boost yields.
+5. Hedging Capabilities: Borrow additional tokens and sell to hedge farming exposure.
+
+// Watch this video to learn more about Blueberry: https://www.youtube.com/watch?v=HBDbeUPKijg
 // https://docs.blueberry.garden/blueberry-overview/what-is-blueberry
