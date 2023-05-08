@@ -94,6 +94,14 @@
 
 ## unpause/pause or lock/unlock functions faulty
 
+## Divide by 0
+- add require(x > 0)
+- Or SafeMath
+
+## No withdraw function - ETH stuck in contract
+
+## DOS - transfer() potentially fails
+
 
 
 ### Need to understand...
