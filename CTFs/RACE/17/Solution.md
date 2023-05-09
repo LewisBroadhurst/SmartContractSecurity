@@ -5,6 +5,10 @@
 (D): If called internally
 
 A) A, B
+How does it revert for "If insufficient ETH was sent with the call"?
+
+How does it revert for "If the caller has insufficient WETH balance"?
+
 
 [Q2] What issues pertain to the deposit() function?
 (A): Funds can be drained through re-entrancy
