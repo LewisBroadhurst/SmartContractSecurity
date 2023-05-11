@@ -55,6 +55,12 @@ reverts.
 
 A) D
 
+Why can funds not be drained through re-entrancy?
+- The function follows the checks - effects - interactions pattern. 
+
+May revert with "failed to transfer ETH"?
+- This would fail if the contract lacks a payable receive/fallback function
+
 [Q4] Which of the following parameters are correctly emitted in the ContributorsUpdated() event?
 (A): newContributor
 (B): oldNumContributors
